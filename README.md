@@ -1,4 +1,4 @@
-#  Predicción del PBI Real Anual de Perú
+# 📊 Predicción del PBI Real Anual de Perú
 
 ## 1. Introducción
 Este proyecto tiene como objetivo principal **comparar distintos modelos de series de tiempo y aprendizaje automático** para predecir y explicar el crecimiento del **Producto Bruto Interno (PBI) real anual del Perú**.
@@ -18,7 +18,7 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 
 ## 2. Descripción de los Datos
 
-###  Variables
+### 📌 Variables
 **Variable dependiente**
 - Crecimiento del PBI real anual (%)
 
@@ -29,7 +29,7 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 - Gasto público (% del PBI)  
 - Exportaciones netas (XN)
 
-###  Fuentes de datos
+### 📊 Fuentes de datos
 - Banco Central de Reserva del Perú (BCRP)  
 - Banco Mundial  
 - Ministerio de Economía y Finanzas (MEF)
@@ -40,18 +40,18 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 
 ### 3.1 Red Neuronal Artificial (RNA)
 
-####  Arquitectura del modelo
+#### 🧠 Arquitectura del modelo
 - Capa de entrada: 5 neuronas  
   *(Inflación, Gasto Público, Consumo Privado, Inversión y Exportaciones Netas)*  
 - Capa oculta: 10 neuronas (ReLU)  
 - Capa de salida: 1 neurona (activación lineal)
 
-####  Configuración
+#### ⚙️ Configuración
 - Optimizador: Adam  
 - Función de pérdida: MSE  
 - Regularización: EarlyStopping
 
-####  Resultados
+#### 📈 Resultados
 - **MSE**: 7.38  
 - **RMSE**: 2.72  
 - **R²**: 0.3911  
@@ -67,7 +67,7 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 - Diferenciación de primer orden para lograr estacionariedad.
 - Selección de órdenes mediante el criterio AIC.
 
-####  Resultados ARIMA(0,1,2)
+#### 📈 Resultados ARIMA(0,1,2)
 - **MSE**: 18.0349  
 - **R²**: 0.0550  
 - **Proyección PBI 2025**: **2.59 %**
@@ -80,7 +80,7 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 
 - Extensión del ARIMA con una variable dummy para capturar el impacto del COVID-19 en 2020.
 
-####  Resultados ARIMAX(0,1,2)
+#### 📈 Resultados ARIMAX(0,1,2)
 - **MSE**: 9.9352  
 - **R²**: 0.4603  
 - **Proyección PBI 2025**: **4.72 %**  
@@ -94,7 +94,7 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 
 - Modelo de espacio de estados para estimar el crecimiento subyacente del PBI, filtrando el ruido de la serie.
 
-####  Resultados
+#### 📈 Resultados
 - **MSE**: 11.2651  
 - **R²**: 0.3880  
 - **Proyección PBI 2025**: **2.49 %**
@@ -105,17 +105,17 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 
 ## 4. Conclusiones Generales
 
-###  Comparación de errores
+### 🔎 Comparación de errores
 - **ARIMAX** presenta el menor error y el mejor ajuste global.
 - **Red Neuronal** y **Filtro de Kalman** muestran un desempeño aceptable.
 - **ARIMA** es el modelo con menor capacidad predictiva.
 
-###  Poder explicativo (R²)
+### 📊 Poder explicativo (R²)
 - **ARIMAX**: 46% de la variación explicada.
 - **RNA y Kalman**: aproximadamente 39%.
 - **ARIMA**: poder explicativo muy bajo.
 
-###  Proyecciones para 2025
+### 📅 Proyecciones para 2025
 - ARIMAX: **4.72 %**
 - Filtro de Kalman: **2.49 %**
 - ARIMA: **2.59 %**
@@ -123,7 +123,7 @@ Cada modelo es evaluado utilizando métricas como el **Error Cuadrático Medio (
 
 📌 **Referencia BCRP**: 3.10 %
 
-### Recomendación final
+### ✅ Recomendación final
 El **modelo ARIMAX(0,1,2) con dummy de COVID-19** es el enfoque más robusto para predecir el crecimiento del PBI real anual del Perú, al combinar precisión, poder explicativo y capacidad para incorporar choques externos.
 
 ---
